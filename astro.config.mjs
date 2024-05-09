@@ -5,11 +5,9 @@ const { PUBLIC_SANITY_PROJECT_ID, PUBLIC_SANITY_DATASET } = loadEnv(
   ''
 );
 import { defineConfig } from 'astro/config';
-
 import sanity from '@sanity/astro';
 import react from '@astrojs/react';
-
-console.log(PUBLIC_SANITY_PROJECT_ID);
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +20,6 @@ export default defineConfig({
       studioBasePath: '/admin',
     }),
     react(),
+    tailwind(),
   ],
 });
