@@ -1,3 +1,7 @@
+---
+import BaseHeader from '~/modules/base/components/base-header.astro';
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +18,7 @@
   </head>
 
   <body>
+    <BaseHeader />
     <main>
       <slot />
     </main>
@@ -36,5 +41,9 @@
   body {
     font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
+  }
+
+  main {
+    padding-top: 128px;
   }
 </style>

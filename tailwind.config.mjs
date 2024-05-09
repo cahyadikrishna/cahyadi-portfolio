@@ -10,6 +10,9 @@ export default {
           main: '#16161A',
           secondary: '#202023',
         },
+        gray: {
+          main: '#F1F1F1',
+        },
         neutral: {
           main: '#FFFFFE',
           secondary: '#C0C0C0',
