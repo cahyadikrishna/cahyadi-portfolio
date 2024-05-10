@@ -1,0 +1,42 @@
+---
+import BaseButton from '~/modules/base/components/base-button.astro';
+---
+
+<section
+  class="bg-gray-main rounded-[30px] container flex gap-[30px] justify-center items-center mx-auto py-[40px] px-[80px] mt-[30px]"
+>
+  <div>
+    <h1 class="text-[66px] font-bold w-[480px] leading-tight">
+      <span
+        class="bg-gradient-to-r from-secondary to-primary inline-block text-transparent bg-clip-text"
+      >
+        Be The Light,
+      </span>
+      Lighten Everything
+    </h1>
+  </div>
+
+  <div class="flex flex-col gap-[20px]">
+    <div class="flex flex-col gap-[12px] text-[18px] text-dark-secondary">
+      <p>
+        Web developer with expertise in Full-Stack Development. Advanced in
+        using JavaScript/TypeScript programming language and frameworks such as
+        Vue, React, Express.
+      </p>
+      <p>
+        Having solid experience in working with teams and well-versed in
+        utilizing Git for version control. Ready to deliver high-quality and
+        innovative solutions for the future industry.
+      </p>
+    </div>
+
+    <div>
+      <BaseButton variant="gradient">
+        <span class="text-[18px]">
+          <i class="ri-download-2-fill"></i>
+        </span>
+        Download CV
+      </BaseButton>
+    </div>
+  </div>
+</section>
