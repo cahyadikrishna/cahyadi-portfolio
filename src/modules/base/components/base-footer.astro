@@ -1,0 +1,71 @@
+---
+import ImageHeroBg from '~/assets/images/hero-bg.png';
+import BaseButton from './base-button.astro';
+---
+
+<footer
+  class="container mx-auto relative overflow-hidden w-full bg-gray-main rounded-[30px] my-[30px]"
+>
+  <img
+    alt=""
+    src={ImageHeroBg.src}
+    class="absolute w-full h-full object-cover"
+  />
+
+  <div class="relative flex flex-col gap-[80px] justify-between p-[40px]">
+    <div class="flex flex-col gap-[16px]">
+      <h1 class="font-bold text-[40px]">Let's get in touch</h1>
+      <p class="text-[18px] w-[480px] text-dark-secondary">
+        Im willing to discuss in more detail about your project, just contact me
+        and talk more!
+      </p>
+    </div>
+
+    <div class="flex gap-[20px] items-center">
+      <BaseButton
+        href="mailto:cahyadikrishna.ck@gmail.com"
+        target="_blank"
+        variant="gradient"
+      >
+        <span class="text-[18px]">
+          <i class="ri-mail-fill"></i>
+        </span>
+        Email Me
+      </BaseButton>
+
+      <div class="flex gap-[12px] text-[34px]">
+        <a
+          href="https://www.linkedin.com/in/cahyadikrishna"
+          target="_blank"
+          class="transition-colors duration-300 ease-in-out hover:text-primary"
+        >
+          <i class="ri-linkedin-box-fill"></i>
+        </a>
+
+        <a
+          href="https://instagram.com/cahyadikrishnaw"
+          target="_blank"
+          class="transition-colors duration-300 ease-in-out hover:text-pink-600"
+        >
+          <i class="ri-instagram-fill"></i>
+        </a>
+
+        <a
+          href="https://wa.me/+6289606620616"
+          target="_blank"
+          class="transition-colors duration-300 ease-in-out hover:text-green-600"
+        >
+          <i class="ri-whatsapp-fill"></i>
+        </a>
+
+        <a
+          href="https://github.com/cahyadikrishna"
+          target="_blank"
+          class="transition-colors duration-300 ease-in-out hover:text-gray-400"
+        >
+          <i class="ri-github-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
