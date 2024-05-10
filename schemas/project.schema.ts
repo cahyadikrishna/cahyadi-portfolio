@@ -10,6 +10,10 @@ export const projectSchema = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'description',
+      type: 'string',
+    }),
+    defineField({
       name: 'picture',
       type: 'image',
       options: {
