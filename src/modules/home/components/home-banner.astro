@@ -1,27 +1,82 @@
 ---
+import ImageHeroBg from '~/assets/images/hero-bg.png';
 import ImageHeroCahyadi from '~/assets/images/hero-cahyadi.png';
+import BaseButton from '~/modules/base/components/base-button.astro';
 ---
 
 <section class="container mx-auto">
   <div class="flex gap-[30px]">
-    <div class="w-full bg-gray-main rounded-[30px] p-[30px]">
-      <h2 class="text-[30px] font-semibold">Hello Everyone 👋</h2>
+    <div class="relative overflow-hidden w-full bg-gray-main rounded-[30px]">
+      <img
+        alt=""
+        src={ImageHeroBg.src}
+        class="absolute w-full h-full object-cover"
+      />
 
-      <h1 class="text-[44px] font-bold mt-[12px] leading-tight">
-        I'm <span class="text-secondary">Cahyadi Krishna</span>,
-        <br />a Full-Stack Developer
-      </h1>
+      <div class="relative p-[40px] flex flex-col justify-between h-full">
+        <div>
+          <h2 class="text-[30px] font-semibold">Hello Everyone 👋</h2>
 
-      <p class="text-[18px] w-[590px] mt-[20px]">
-        Have been in tech industries for 3 Years and having passion to build
-        usefull project for future industries.
-      </p>
+          <h1 class="text-[44px] font-bold mt-[12px] leading-tight">
+            I'm <span class="text-secondary">Cahyadi Krishna,</span>
+            <br />a Full-Stack Developer
+          </h1>
+
+          <p class="text-[18px] w-[590px] mt-[20px]">
+            Have been in tech industries for 3 Years and having passion to build
+            usefull project for future industries.
+          </p>
+        </div>
+
+        <div class="flex gap-[20px] items-center">
+          <BaseButton variant="primary">
+            <span class="text-[18px]">
+              <i class="ri-mail-fill"></i>
+            </span>
+            Email Me
+          </BaseButton>
+
+          <div class="flex gap-[12px] text-[32px]">
+            <a
+              href="https://www.linkedin.com/in/cahyadikrishna"
+              target="_blank"
+              class="hover:text-primary"
+            >
+              <i class="ri-linkedin-box-fill"></i>
+            </a>
+
+            <a
+              href="https://instagram.com/cahyadikrishnaw"
+              target="_blank"
+              class="hover:text-pink-600"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+
+            <a
+              href="https://wa.me/+6289606620616"
+              target="_blank"
+              class="hover:text-green-600"
+            >
+              <i class="ri-whatsapp-fill"></i>
+            </a>
+
+            <a
+              href="https://github.com/cahyadikrishna"
+              target="_blank"
+              class="hover:text-gray-600"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="w-[550px] bg-primary rounded-[30px]">
+    <div class="w-[550px] rounded-[30px]">
       <img
-        src={ImageHeroCahyadi.src}
         alt="Cahyadi Photo"
+        src={ImageHeroCahyadi.src}
         class="object-cover rounded-[30px]"
       />
     </div>
