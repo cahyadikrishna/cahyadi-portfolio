@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'astro/types';
 import { twMerge } from 'tailwind-merge';
 
 interface Props extends HTMLAttributes<'a'> {
-  variant: 'primary' | 'secondary';
+  variant: 'gradient' | 'primary' | 'secondary';
 }
 
 const { variant, ...props } = Astro.props;
@@ -12,6 +12,8 @@ const { variant, ...props } = Astro.props;
 <a
   class={twMerge(
     'cursor-pointer px-[30px] py-[10px] inline-flex rounded-[8px] items-center justify-center gap-[8px] font-semibold',
+    variant === 'gradient' &&
+      'transition duration-300 ease-in-out bg-gradient-to-r from-secondary to-primary text-white hover:scale-110',
     variant === 'primary' && 'bg-primary text-white',
     variant === 'secondary' && 'bg-secondary text-white',
     Astro.props.class
