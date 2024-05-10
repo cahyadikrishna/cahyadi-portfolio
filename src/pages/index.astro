@@ -4,6 +4,7 @@ import HomeAbout from '~/modules/home/components/home-about.astro';
 import HomeBanner from '~/modules/home/components/home-banner.astro';
 import HomeProject from '~/modules/home/components/home-project.astro';
 import HomeTechstack from '~/modules/home/components/home-techstack.astro';
+import HomePortfolio from '~/modules/home/components/home-portfolio.tsx';
 ---
 
 <MainLayout>
@@ -11,4 +12,5 @@ import HomeTechstack from '~/modules/home/components/home-techstack.astro';
   <HomeAbout />
   <HomeTechstack />
   <HomeProject />
+  <HomePortfolio client:load />
 </MainLayout>
