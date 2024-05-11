@@ -12,6 +12,7 @@ export default {
         },
         gray: {
           main: '#F1F1F1',
+          secondary: '#E1E1E1',
         },
         neutral: {
           main: '#FFFFFE',
