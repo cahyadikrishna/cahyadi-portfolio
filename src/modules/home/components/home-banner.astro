@@ -4,8 +4,8 @@ import ImageHeroCahyadi from '~/assets/images/hero-cahyadi.png';
 import BaseButton from '~/modules/base/components/base-button.astro';
 ---
 
-<section class="container mx-auto">
-  <div class="flex gap-[30px]">
+<section class="container mx-auto px-[20px]">
+  <div class="flex flex-col-reverse gap-[20px] sm:gap-[30px] sm:flex-row">
     <div class="relative overflow-hidden w-full bg-gray-main rounded-[30px]">
       <img
         alt=""
@@ -13,12 +13,19 @@ import BaseButton from '~/modules/base/components/base-button.astro';
         class="absolute w-full h-full object-cover"
       />
 
-      <div class="relative p-[40px] flex flex-col justify-between h-full">
+      <div
+        class="relative p-[20px] flex flex-col justify-between sm:h-full sm:p-[40px]"
+      >
         <div>
-          <h2 class="text-[30px] font-semibold">Hello Everyone 👋</h2>
+          <h2 class="text-[18px] font-semibold lg:text-[30px]">
+            Hello Everyone 👋
+          </h2>
 
-          <h1 class="text-[44px] font-bold mt-[12px] leading-tight">
-            I'm <span
+          <h1
+            class="text-[22px] font-bold mt-[8px] leading-tight lg:text-[44px] lg:mt-[12px]"
+          >
+            I'm
+            <span
               class="bg-gradient-to-r from-secondary to-primary inline-block text-transparent bg-clip-text"
             >
               Cahyadi Krishna,
@@ -26,17 +33,22 @@ import BaseButton from '~/modules/base/components/base-button.astro';
             <br />a Full-Stack Developer
           </h1>
 
-          <p class="text-[18px] w-[590px] mt-[20px] text-dark-secondary">
+          <p
+            class="text-[12px] leading-5 w-full text-dark-secondary mt-[14px] lg:leading-8 lg:mt-[20px] lg:text-[18px] lg:w-[590px]"
+          >
             Have been in tech industries for 3 Years and having passion to build
             usefull project for future industries.
           </p>
         </div>
 
-        <div class="flex gap-[20px] items-center">
+        <div
+          class="flex flex-col gap-[20px] items-center mt-[50px] lg:mt-0 lg:flex-row"
+        >
           <BaseButton
             href="mailto:cahyadikrishna.ck@gmail.com"
             target="_blank"
             variant="gradient"
+            class="w-full lg:w-fit"
           >
             <span class="text-[18px]">
               <i class="ri-mail-fill"></i>
@@ -85,7 +97,7 @@ import BaseButton from '~/modules/base/components/base-button.astro';
       <img
         alt="Cahyadi Photo"
         src={ImageHeroCahyadi.src}
-        class="object-cover rounded-[30px] w-[600px]"
+        class="h-[300px] object-cover rounded-[30px] w-full sm:h-[400px] sm:w-[550px] lg:w-[600px] lg:h-[500px]"
       />
     </div>
   </div>
