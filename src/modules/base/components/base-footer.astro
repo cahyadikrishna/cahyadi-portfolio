@@ -13,20 +13,27 @@ import BaseButton from './base-button.astro';
       class="absolute w-full h-full object-cover"
     />
 
-    <div class="relative flex flex-col gap-[80px] justify-between p-[40px]">
-      <div class="flex flex-col gap-[16px]">
-        <h1 class="font-bold text-[40px]">Let's get in touch</h1>
-        <p class="text-[18px] w-[480px] text-dark-secondary">
+    <div
+      class="relative flex flex-col gap-[50px] justify-between py-[30px] px-[20px] md:p-[40px] lg:gap-[80px]"
+    >
+      <div
+        class="flex flex-col text-center gap-[10px] lg:gap-[16px] lg:text-left"
+      >
+        <h1 class="font-bold text-[30px] lg:text-[40px]">Let's get in touch</h1>
+        <p
+          class="text-[12px] lg:text-[18px] w-full lg:w-[480px] text-dark-secondary leading-5 lg:leading-8"
+        >
           Im willing to discuss in more detail about your project, just contact
           me and talk more!
         </p>
       </div>
 
-      <div class="flex gap-[20px] items-center">
+      <div class="flex flex-col gap-[20px] items-center lg:flex-row">
         <BaseButton
           href="mailto:cahyadikrishna.ck@gmail.com"
           target="_blank"
           variant="gradient"
+          class="w-full lg:w-fit"
         >
           <span class="text-[18px]">
             <i class="ri-mail-fill"></i>
