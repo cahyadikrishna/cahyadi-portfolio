@@ -10,7 +10,7 @@ const projects = await sanityClient.fetch('*[_type == "project"]');
   <h1 class="font-bold text-[30px] lg:text-[40px]">Latest Project</h1>
 
   <div
-    class="flex flex-col gap-[20px] mt-[20px] md:flex-row lg:gap-[30px] lg:mt-[30px]"
+    class="grid grid-cols-1 gap-[20px] mt-[20px] md:grid-cols-2 lg:grid-cols-3 lg:gap-[30px] lg:mt-[30px]"
   >
     {
       projects.map((project) => (

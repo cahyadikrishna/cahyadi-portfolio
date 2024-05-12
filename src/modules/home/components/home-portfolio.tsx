@@ -18,11 +18,11 @@ export default function HomePortfolio() {
   return (
     <section className="container mx-auto px-[20px] mt-[50px]">
       <TabGroup>
-        <TabList className="bg-gray-main flex gap-[12px] py-[16px] px-[22px] rounded-[20px] mx-auto justify-center items-center w-fit">
+        <TabList className="bg-gray-main flex flex-col gap-[12px] py-[16px] px-[22px] rounded-[20px] mx-auto justify-center items-center w-full sm:w-fit sm:flex-row">
           {portfolios.map((portfolio, i) => (
             <Tab
               key={i}
-              className="text-dark-secondary py-[6px] px-[44px] rounded-[8px] font-semibold focus:outline-none data-[selected]:bg-gradient-to-r data-[selected]:from-secondary data-[selected]:to-primary data-[selected]:text-white data-[hover]:bg-gray-secondary"
+              className="text-dark-secondary py-[6px] px-[44px] rounded-[8px] font-semibold focus:outline-none data-[selected]:bg-gradient-to-r data-[selected]:from-secondary data-[selected]:to-primary data-[selected]:text-white data-[hover]:bg-gray-secondary w-full sm:w-fit"
             >
               {portfolio.name}
             </Tab>
@@ -31,7 +31,10 @@ export default function HomePortfolio() {
 
         <TabPanels>
           {portfolios.map((portfolio, i) => (
-            <TabPanel key={i} className="grid grid-cols-2 gap-[40px] mt-[60px]">
+            <TabPanel
+              key={i}
+              className="grid grid-cols-1 gap-[40px] mt-[60px] sm:grid-cols-2"
+            >
               {portfolio.contents.map((content, i) => (
                 <div key={i}>
                   <div className="flex flex-col gap-[10px]">
