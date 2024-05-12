@@ -1,13 +1,15 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import { useEffect, useState } from 'react';
 import { sanityClient } from '~/api/sanity-api';
+import { type Portfolio } from '~/entities';
 
 export default function HomePortfolio() {
-  // TODO: Make the typing
-  const [portfolios, setPortfolios] = useState([]);
+  const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
 
   async function getPortfolio() {
-    const portfolios = await sanityClient.fetch('*[_type == "portfolio"]');
+    const portfolios = await sanityClient.fetch<Portfolio[]>(
+      '*[_type == "portfolio"]'
+    );
     setPortfolios(portfolios);
   }
 
@@ -35,7 +37,7 @@ export default function HomePortfolio() {
               key={i}
               className="grid grid-cols-1 gap-[40px] mt-[60px] sm:grid-cols-2"
             >
-              {portfolio.contents.map((content, i) => (
+              {portfolio.contents!.map((content, i) => (
                 <div key={i}>
                   <div className="flex flex-col gap-[10px]">
                     <h2 className="font-semibold text-[24px]">
