@@ -6,29 +6,35 @@ import { sanityImageUrl } from '~/helpers/sanity-image-url';
 const projects = await sanityClient.fetch('*[_type == "project"]');
 ---
 
-<section class="container mx-auto px-[20px] mt-[80px]">
-  <h1 class="font-bold text-[40px]">Latest Project</h1>
+<section class="container mx-auto px-[20px] mt-[60px] lg:mt-[80px]">
+  <h1 class="font-bold text-[30px] lg:text-[40px]">Latest Project</h1>
 
-  <div class="flex gap-[30px] mt-[30px]">
+  <div
+    class="flex flex-col gap-[20px] mt-[20px] md:flex-row lg:gap-[30px] lg:mt-[30px]"
+  >
     {
       projects.map((project) => (
-        <div class="bg-gray-main relative rounded-[30px] h-[400px] w-full">
+        <div class="bg-gray-main relative rounded-[30px] h-[300px] w-full lg:h-[400px]">
           <img
             alt=""
             src={sanityImageUrl(project.picture).url()}
             class="absolute w-full h-full object-cover rounded-[30px]"
           />
 
-          <div class="relative p-[28px]">
-            <h2 class="font-semibold text-white text-[24px]">{project.name}</h2>
-            <p class="text-[12px] text-white">{project.description}</p>
+          <div class="relative p-[20px] lg:p-[28px]">
+            <h2 class="font-semibold text-white text-[20px] lg:text-[24px]">
+              {project.name}
+            </h2>
+            <p class="text-[10px] text-white lg:text-[12px] leading-normal">
+              {project.description}
+            </p>
           </div>
         </div>
       ))
     }
   </div>
 
-  <div class="text-right mt-[30px]">
+  <div class="text-center mt-[30px] lg:text-right">
     <a
       href="/project"
       class="inline-flex items-center justify-center gap-[8px] font-semibold"

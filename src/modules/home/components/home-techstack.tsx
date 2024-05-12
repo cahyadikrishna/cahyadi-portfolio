@@ -15,6 +15,7 @@ export default function HomeTechstack() {
       >
         {TECH_STACK_DATA.map((techStack, i) => (
           <img
+            key={i}
             src={techStack.path}
             alt={techStack.name}
             width={50}
