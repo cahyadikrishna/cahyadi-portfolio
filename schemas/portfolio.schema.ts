@@ -8,6 +8,7 @@ export const portfolioSchema = defineType({
     defineField({
       name: 'name',
       type: 'string',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'contents',
@@ -20,14 +21,17 @@ export const portfolioSchema = defineType({
             defineField({
               name: 'title',
               type: 'string',
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: 'role',
               type: 'string',
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: 'startDate',
               type: 'date',
+              validation: (rule) => rule.required(),
             }),
             defineField({
               name: 'endDate',
@@ -36,6 +40,7 @@ export const portfolioSchema = defineType({
             defineField({
               name: 'description',
               type: 'string',
+              validation: (rule) => rule.required(),
             }),
           ],
         }),

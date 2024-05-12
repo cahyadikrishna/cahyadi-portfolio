@@ -1,9 +1,10 @@
 ---
+import imageUrlBuilder from '@sanity/image-url';
 import { sanityClient } from '~/api/sanity-api';
-import { sanityImageUrl } from '~/helpers/sanity-image-url';
+import { type Project } from '~/entities';
 
-// TODO: Make the typing
-const projects = await sanityClient.fetch('*[_type == "project"]');
+const projects = await sanityClient.fetch<Project[]>('*[_type == "project"]');
+const builder = imageUrlBuilder(sanityClient);
 ---
 
 <section class="container mx-auto px-[20px] mt-[60px] lg:mt-[80px]">
@@ -17,7 +18,7 @@ const projects = await sanityClient.fetch('*[_type == "project"]');
         <div class="bg-gray-main relative rounded-[30px] h-[300px] w-full lg:h-[400px]">
           <img
             alt=""
-            src={sanityImageUrl(project.picture).url()}
+            src={builder.image(project.picture!).url()}
             class="absolute w-full h-full object-cover rounded-[30px]"
           />
 
