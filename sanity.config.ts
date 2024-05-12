@@ -5,8 +5,8 @@ import { schemaTypes } from './schemas';
 export default defineConfig({
   name: 'cahyadi-portfolio',
   title: 'Cahyadi Portfolio',
-  projectId: import.meta.env.PUBLIC_SANITY_PROJECT_ID,
-  dataset: import.meta.env.PUBLIC_SANITY_DATASET,
+  projectId: String(process.env.PUBLIC_SANITY_PROJECT_ID),
+  dataset: String(process.env.PUBLIC_SANITY_DATASET),
   plugins: [structureTool()],
   schema: {
     types: schemaTypes,
