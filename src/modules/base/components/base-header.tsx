@@ -77,10 +77,11 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
           </div>
         </div>
 
+        {/* Mobile Nav Menu */}
         <div className="block md:hidden">
           <div
             className={cnb(
-              'flex h-full items-center justify-between px-[20px] py-[14px] transition ease-in-out duration-300',
+              'flex h-full items-center justify-between px-[20px] transition ease-in-out duration-300',
               {
                 'px-[16px] md:px-[30px]': isScroll,
               }
@@ -95,10 +96,18 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
             </a>
 
             <div
-              className="text-[28px] p-[8px]"
+              className="px-[8px] py-[12px]"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <i className="ri-menu-3-fill"></i>
+              {isOpen ? (
+                <span className="text-[32px]">
+                  <i className="ri-close-fill"></i>
+                </span>
+              ) : (
+                <span className="text-[28px]">
+                  <i className="ri-menu-3-fill"></i>
+                </span>
+              )}
             </div>
           </div>
 
