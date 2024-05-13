@@ -10,7 +10,7 @@ import HomePortfolio from '~/modules/home/components/home-portfolio.tsx';
 <MainLayout>
   <HomeBanner />
   <HomeAbout />
-  <HomeTechstack client:only />
+  <HomeTechstack client:only="react" />
   <HomeProject />
   <HomePortfolio client:load />
 </MainLayout>

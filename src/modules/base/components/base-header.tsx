@@ -29,44 +29,103 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
           'bg-gray-main rounded-[30px] drop-shadow-2xl': isScroll,
         })}
       >
-        <div
-          className={cnb(
-            'flex h-full items-center justify-between px-[20px] py-[14px] transition ease-in-out duration-300',
-            {
-              'px-[16px] md:px-[30px]': isScroll,
-            }
-          )}
-        >
-          <a href="/" className="logo">
-            <img
-              src={logo.src}
-              alt="Cahyadi Krishna"
-              className="h-[40px] w-[40px]"
-            />
-          </a>
+        <div className="hidden md:block">
+          <div
+            className={cnb(
+              'flex h-full items-center justify-between px-[20px] py-[14px] transition ease-in-out duration-300',
+              {
+                'px-[16px] md:px-[30px]': isScroll,
+              }
+            )}
+          >
+            <a href="/" className="logo">
+              <img
+                src={logo.src}
+                alt="Cahyadi Krishna"
+                className="h-[40px] w-[40px]"
+              />
+            </a>
+
+            {/* TODO: Make menus as a object data */}
+            <nav className="hidden md:block">
+              <ul className="flex gap-[40px] font-semibold">
+                <li className="hover:text-secondary text-secondary">
+                  <a href="/" className="">
+                    Home
+                  </a>
+                </li>
+
+                <li className="hover:text-secondary">
+                  <a href="/" className="">
+                    About
+                  </a>
+                </li>
+
+                <li className="hover:text-secondary">
+                  <a href="/" className="">
+                    Project
+                  </a>
+                </li>
+
+                <li className="hover:text-secondary">
+                  <a href="/" className="">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div className="block md:hidden">
+          <div
+            className={cnb(
+              'flex h-full items-center justify-between px-[20px] py-[14px] transition ease-in-out duration-300',
+              {
+                'px-[16px] md:px-[30px]': isScroll,
+              }
+            )}
+          >
+            <a href="/" className="logo">
+              <img
+                src={logo.src}
+                alt="Cahyadi Krishna"
+                className="h-[40px] w-[40px]"
+              />
+            </a>
+
+            <div
+              className="text-[28px] p-[8px]"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <i className="ri-menu-3-fill"></i>
+            </div>
+          </div>
+
+          <hr className={isOpen ? 'block' : 'hidden'}></hr>
 
           {/* TODO: Make menus as a object data */}
-          <nav className="hidden md:block">
-            <ul className="flex gap-[40px] font-semibold">
-              <li className="hover:text-secondary text-secondary">
+          <nav className={isOpen ? 'block' : 'hidden'}>
+            <ul className="flex flex-col items-center font-semibold py-[14px]">
+              <li className="hover:text-secondary py-[10px] text-secondary">
                 <a href="/" className="">
                   Home
                 </a>
               </li>
 
-              <li className="hover:text-secondary">
+              <li className="hover:text-secondary py-[10px]">
                 <a href="/" className="">
                   About
                 </a>
               </li>
 
-              <li className="hover:text-secondary">
+              <li className="hover:text-secondary py-[10px]">
                 <a href="/" className="">
                   Project
                 </a>
               </li>
 
-              <li className="hover:text-secondary">
+              <li className="hover:text-secondary py-[8px]">
                 <a href="/" className="">
                   Contact
                 </a>
