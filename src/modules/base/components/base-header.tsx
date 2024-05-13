@@ -25,7 +25,7 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
       )}
     >
       <div
-        className={cnb('backdrop-blur-md transition ease-in-out duration-300', {
+        className={cnb('bg-white transition ease-in-out duration-300', {
           'bg-gray-main rounded-[30px] drop-shadow-2xl': isScroll,
         })}
       >
