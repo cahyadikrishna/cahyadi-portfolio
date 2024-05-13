@@ -1,7 +1,9 @@
 ---
 import 'remixicon/fonts/remixicon.css';
-import BaseHeader from '~/modules/base/components/base-header.astro';
+import BaseHeader from '~/modules/base/components/base-header.tsx';
 import BaseFooter from '~/modules/base/components/base-footer.astro';
+
+const pathName = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -20,7 +22,7 @@ import BaseFooter from '~/modules/base/components/base-footer.astro';
   </head>
 
   <body>
-    <BaseHeader />
+    <BaseHeader pathName={pathName} client:load />
     <main>
       <slot />
     </main>
@@ -47,6 +49,6 @@ import BaseFooter from '~/modules/base/components/base-footer.astro';
   }
 
   main {
-    padding-top: 128px;
+    padding-top: 80px;
   }
 </style>

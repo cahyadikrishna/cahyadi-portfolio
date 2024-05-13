@@ -1,42 +1,42 @@
 export const TECH_STACK_DATA = [
   {
     name: 'HTML',
-    path: '/src/assets/icons/html.png',
+    path: '/icons/html.png',
   },
   {
     name: 'CSS',
-    path: '/src/assets/icons/css.png',
+    path: '/icons/css.png',
   },
   {
     name: 'SCSS',
-    path: '/src/assets/icons/sass.png',
+    path: '/icons/sass.png',
   },
   {
     name: 'Javascript',
-    path: '/src/assets/icons/javascript.png',
+    path: '/icons/javascript.png',
   },
   {
     name: 'Typescript',
-    path: '/src/assets/icons/typescript.png',
+    path: '/icons/typescript.png',
   },
   {
     name: 'Github',
-    path: '/src/assets/icons/github.png',
+    path: '/icons/github.png',
   },
   {
     name: 'Vue.js',
-    path: '/src/assets/icons/vuejs.png',
+    path: '/icons/vuejs.png',
   },
   {
     name: 'Nuxt',
-    path: '/src/assets/icons/nuxt.png',
+    path: '/icons/nuxt.png',
   },
   {
     name: 'React.js',
-    path: '/src/assets/icons/react.png',
+    path: '/icons/react.png',
   },
   {
     name: 'Express.js',
-    path: '/src/assets/icons/express-js.png',
+    path: '/icons/express-js.png',
   },
 ];
