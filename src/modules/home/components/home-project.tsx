@@ -3,9 +3,6 @@ import imageUrlBuilder from '@sanity/image-url';
 import { sanityClient } from '~/api/sanity-api';
 import { type Project } from '~/entities';
 
-import imgBg from '~/assets/images/hero-bg.png';
-import { cnb } from 'cnbuilder';
-
 export default function HomeProject() {
   const builder = imageUrlBuilder(sanityClient);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -27,24 +24,24 @@ export default function HomeProject() {
 
       <div className="grid grid-cols-1 gap-[20px] mt-[20px] md:grid-cols-2 lg:grid-cols-3 lg:gap-[30px] lg:mt-[30px]">
         {projects.map((project) => (
-          <div
-            key={project._id}
-            className="bg-gray-main group relative rounded-[30px] h-[300px] w-full lg:h-[400px] overflow-hidden"
-          >
-            <img
-              alt=""
-              src={builder.image(project.picture!).url()}
-              className="
-                  trainsition delay-150 duration-300 ease-in-out absolute w-full h-full object-cover rounded-[30px] group-hover:scale-125"
-            />
+          <div key={project._id} className="relative group">
+            <a href="#" className="absolute h-full w-full z-10" />
+            <div className="bg-gray-main relative rounded-[30px] h-[300px] w-full lg:h-[400px] overflow-hidden">
+              <img
+                alt=""
+                src={builder.image(project.picture!).url()}
+                className="
+                  trainsition delay-100 duration-300 ease-in-out absolute w-full h-full object-cover rounded-[30px] group-hover:scale-125"
+              />
 
-            <div className="relative p-[20px] lg:p-[28px]">
-              <h2 className="font-semibold text-white text-[20px] lg:text-[24px]">
-                {project.name}
-              </h2>
-              <p className="text-[10px] text-white lg:text-[12px] leading-normal">
-                {project.description}
-              </p>
+              <div className="relative p-[20px] lg:p-[28px]">
+                <h2 className="font-semibold text-white text-[20px] lg:text-[24px]">
+                  {project.name}
+                </h2>
+                <p className="text-[10px] text-white lg:text-[12px] leading-normal">
+                  {project.description}
+                </p>
+              </div>
             </div>
           </div>
         ))}
