@@ -31,7 +31,7 @@ export default function HomeProject() {
                 alt=""
                 src={builder.image(project.picture!).url()}
                 className="
-                  trainsition delay-100 duration-300 ease-in-out absolute w-full h-full object-cover rounded-[30px] group-hover:scale-125"
+                  trainsition delay-125 duration-300 ease-in-out absolute w-full h-full object-cover rounded-[30px] group-hover:scale-110"
               />
 
               <div className="relative p-[20px] lg:p-[28px]">
