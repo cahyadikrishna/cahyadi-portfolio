@@ -15,6 +15,21 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
     }
   }, [pathName]);
 
+  const MENU_LIST = [
+    {
+      name: 'Home',
+      path: '/',
+    },
+    {
+      name: 'About',
+      path: '/about',
+    },
+    {
+      name: 'Project',
+      path: '/project',
+    },
+  ];
+
   return (
     <header
       className={cnb(
@@ -46,32 +61,18 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
               />
             </a>
 
-            {/* TODO: Make menus as a object data */}
             <nav className="hidden md:block">
               <ul className="flex gap-[40px] font-semibold">
-                <li className="hover:text-secondary text-secondary">
-                  <a href="/" className="">
-                    Home
-                  </a>
-                </li>
-
-                <li className="hover:text-secondary">
-                  <a href="/" className="">
-                    About
-                  </a>
-                </li>
-
-                <li className="hover:text-secondary">
-                  <a href="/" className="">
-                    Project
-                  </a>
-                </li>
-
-                <li className="hover:text-secondary">
-                  <a href="/" className="">
-                    Contact
-                  </a>
-                </li>
+                {MENU_LIST.map((menu) => (
+                  <li
+                    key={menu.name}
+                    className={cnb('hover:text-secondary', {
+                      'text-secondary': menu.path === pathName,
+                    })}
+                  >
+                    <a href={menu.path}>{menu.name}</a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
@@ -116,29 +117,16 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
           {/* TODO: Make menus as a object data */}
           <nav className={isOpen ? 'block' : 'hidden'}>
             <ul className="flex flex-col items-center font-semibold py-[14px]">
-              <li className="hover:text-secondary py-[10px] text-secondary">
-                <a href="/" className="">
-                  Home
-                </a>
-              </li>
-
-              <li className="hover:text-secondary py-[10px]">
-                <a href="/" className="">
-                  About
-                </a>
-              </li>
-
-              <li className="hover:text-secondary py-[10px]">
-                <a href="/" className="">
-                  Project
-                </a>
-              </li>
-
-              <li className="hover:text-secondary py-[8px]">
-                <a href="/" className="">
-                  Contact
-                </a>
-              </li>
+              {MENU_LIST.map((menu) => (
+                <li
+                  key={menu.name}
+                  className={cnb('hover:text-secondary py-[10px]', {
+                    'text-secondary': menu.path === pathName,
+                  })}
+                >
+                  <a href={menu.path}>{menu.name}</a>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
