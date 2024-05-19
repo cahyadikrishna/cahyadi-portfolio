@@ -15,6 +15,15 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
     }
   }, [pathName]);
 
+  useEffect(() => {
+    // reset state when scrolled when menu opened
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0 && isOpen) {
+        setIsOpen(false);
+      }
+    });
+  }, [window.scrollY]);
+
   const MENU_LIST = [
     {
       name: 'Home',
