@@ -18,7 +18,7 @@ export default function HomePortfolio() {
   }, []);
 
   return (
-    <section className="container mx-auto px-[20px] mt-[50px]">
+    <section className="max-w-[1200px] mx-auto px-[20px] mt-[50px]">
       <TabGroup>
         <TabList className="bg-gray-main flex flex-col gap-[12px] py-[16px] px-[22px] rounded-[20px] mx-auto justify-center items-center w-full sm:w-fit sm:flex-row">
           {portfolios.map((portfolio, i) => (

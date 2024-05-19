@@ -42,7 +42,7 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
   return (
     <header
       className={cnb(
-        'container transition ease-in-out duration-300 px-[20px] fixed inset-x-0 mx-auto z-10',
+        'max-w-[1200px] transition ease-in-out duration-300 px-[20px] fixed inset-x-0 mx-auto z-10',
         {
           'top-[30px] px-[30px] lg:px-[80px]': isScroll,
         }
