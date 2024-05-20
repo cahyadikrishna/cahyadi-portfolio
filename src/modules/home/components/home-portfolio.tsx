@@ -35,23 +35,29 @@ export default function HomePortfolio() {
           {portfolios.map((portfolio, i) => (
             <TabPanel
               key={i}
-              className="grid grid-cols-1 gap-[40px] mt-[60px] sm:grid-cols-2"
+              className="grid grid-cols-1 gap-[30px] mt-[60px] sm:grid-cols-2"
             >
               {portfolio.contents!.map((content, i) => (
-                <div key={i}>
+                <div key={i} className="bg-gray-main rounded-[30px] p-[30px]">
                   <div className="flex flex-col gap-[10px]">
-                    <h2 className="font-semibold text-[24px]">
-                      {content.title}
-                    </h2>
+                    <div className="flex items-start justify-between">
+                      <h2 className="font-semibold text-[20px] max-w-[330px]">
+                        {content.title}
+                      </h2>
 
-                    <span className="text-[20px] text-medium text-dark-secondary">
-                      {content.role} | {content.startDate} - {content.endDate}
+                      <div className="bg-primary text-white text-[12px] font-semibold px-[12px] py-[4px] rounded-[10px]">
+                        <span>2020 - Present</span>
+                      </div>
+                    </div>
+
+                    <span className="font-semibold text-primary">
+                      Core Team
                     </span>
-                  </div>
 
-                  <p className="text-[18px] text-dark-secondary">
-                    {content.description}
-                  </p>
+                    <hr className="border border-b-2 rounded-full" />
+
+                    <p className="text-dark-secondary">{content.description}</p>
+                  </div>
                 </div>
               ))}
             </TabPanel>
