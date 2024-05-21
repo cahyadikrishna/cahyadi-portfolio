@@ -19,7 +19,7 @@ export default function HomeProject() {
   }, []);
 
   return (
-    <section className="container mx-auto px-[20px] mt-[60px] lg:mt-[80px]">
+    <section className="max-w-[1200px] mx-auto px-[20px] mt-[60px] lg:mt-[80px]">
       <h1 className="font-bold text-[30px] lg:text-[40px]">Latest Project</h1>
 
       <div className="grid grid-cols-1 gap-[20px] mt-[20px] md:grid-cols-2 lg:grid-cols-3 lg:gap-[30px] lg:mt-[30px]">

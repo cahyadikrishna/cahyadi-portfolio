@@ -3,7 +3,7 @@ import { TECH_STACK_DATA } from '~/modules/home/entities/home.entity';
 
 export default function HomeTechstack() {
   return (
-    <section className="container mx-auto px-[20px] text-center mt-[40px] lg:mt-[60px] lg:px-[130px]">
+    <section className="max-w-[1200px] mx-auto px-[20px] text-center mt-[40px] lg:mt-[60px] lg:px-[130px]">
       <h1 className="font-bold text-[30px] lg:text-[40px] leading-tight">
         Tech Stack Advanced
       </h1>
