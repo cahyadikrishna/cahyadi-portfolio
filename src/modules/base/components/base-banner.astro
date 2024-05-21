@@ -1,4 +1,6 @@
 ---
+import ImageHeroBg from '~/assets/images/hero-bg.png';
+
 interface Props extends Object {
   titleHightlight: string;
   titleRest: string;
@@ -8,9 +10,15 @@ interface Props extends Object {
 const { titleHightlight, titleRest, description } = Astro.props;
 ---
 
-<section class="max-w-[1200px] mx-auto px-[20px]">
+<section class="max-w-[1200px] mx-auto px-[20px] relative">
+  <img
+    alt=""
+    src={ImageHeroBg.src}
+    class="absolute w-full h-full object-cover rounded-[30px]"
+  />
+
   <div
-    class="bg-gray-main rounded-[30px] flex flex-col gap-[6px] p-[20px] lg:gap-[10px] md:px-[50px] md:py-[30px]"
+    class="relative rounded-[30px] flex flex-col gap-[6px] p-[20px] lg:gap-[10px] md:px-[50px] md:py-[30px]"
   >
     <div>
       <h1
