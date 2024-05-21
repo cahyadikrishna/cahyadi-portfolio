@@ -49,6 +49,14 @@ export default function BaseModalContact({
               </a>
 
               <a
+                href="mailto:cahyadikrishna.ck@gmail.com"
+                target="_blank"
+                className="transition-colors duration-300 ease-in-out hover:text-red-600"
+              >
+                <i className="ri-mail-fill"></i>
+              </a>
+
+              <a
                 href="https://instagram.com/cahyadikrishnaw"
                 target="_blank"
                 className="transition-colors duration-300 ease-in-out hover:text-pink-600"

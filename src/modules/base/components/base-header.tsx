@@ -50,7 +50,7 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
       <BaseModalContact status={isModalVisible} toggleModal={toggleModal} />
       <header
         className={cnb(
-          'container transition ease-in-out duration-300 px-[20px] fixed inset-x-0 mx-auto z-10',
+          'max-w-[1200px] transition ease-in-out duration-300 px-[20px] fixed inset-x-0 mx-auto z-10',
           {
             'top-[30px] px-[30px] lg:px-[80px]': isScroll,
           }
@@ -79,7 +79,7 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
               </a>
 
               <nav className="hidden md:block">
-                <ul className="flex gap-[40px] font-semibold">
+                <ul className="flex items-center gap-[40px] font-semibold">
                   {MENU_LIST.map((menu) => (
                     <li
                       key={menu.name}
@@ -90,6 +90,13 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
                       <a href={menu.path}>{menu.name}</a>
                     </li>
                   ))}
+
+                  <button
+                    className="px-[20px] py-[2px] bg-gradient-to-r from-secondary to-primary rounded-[6px] text-white"
+                    onClick={() => setIsModalVisible(true)}
+                  >
+                    Contact
+                  </button>
                 </ul>
               </nav>
             </div>
@@ -132,7 +139,7 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
             <hr className={isOpen ? 'block' : 'hidden'}></hr>
 
             <nav className={isOpen ? 'block' : 'hidden'}>
-              <ul className="flex flex-col items-center font-semibold py-[14px]">
+              <ul className="flex flex-col items-center font-semibold py-[20px] px-[16px]">
                 {MENU_LIST.map((menu) => (
                   <li
                     key={menu.name}
@@ -143,6 +150,13 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
                     <a href={menu.path}>{menu.name}</a>
                   </li>
                 ))}
+
+                <button
+                  className="px-[20px] py-[2px] rounded-[6px] text-white w-full bg-gradient-to-r from-secondary to-primary"
+                  onClick={() => setIsModalVisible(true)}
+                >
+                  Contact
+                </button>
               </ul>
             </nav>
           </div>
