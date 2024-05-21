@@ -36,12 +36,12 @@ export default function BaseHeader({ pathName }: { pathName: string }) {
       path: '/',
     },
     {
-      name: 'About',
-      path: '/about',
-    },
-    {
       name: 'Project',
       path: '/project',
+    },
+    {
+      name: 'About',
+      path: '/about',
     },
   ];
 

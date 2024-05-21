@@ -1,0 +1,14 @@
+---
+import MainLayout from '~/layouts/main.layout.astro';
+import BaseBanner from '~/modules/base/components/base-banner.astro';
+import ProjectListSection from '~/modules/project/components/project-list-section.tsx';
+---
+
+<MainLayout>
+  <BaseBanner
+    titleHightlight="Project"
+    titleRest="I've been made"
+    description="Have been in tech industries for 3 Years and having passion to build usefull project for future industries."
+  />
+  <ProjectListSection client:load />
+</MainLayout>
