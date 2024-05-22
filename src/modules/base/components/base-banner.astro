@@ -10,33 +10,35 @@ interface Props extends Object {
 const { titleHightlight, titleRest, description } = Astro.props;
 ---
 
-<section class="max-w-[1200px] mx-auto px-[20px] relative">
-  <img
-    alt=""
-    src={ImageHeroBg.src}
-    class="absolute w-full h-full object-cover rounded-[30px]"
-  />
+<section class="max-w-[1200px] px-[20px] mx-auto">
+  <div class="relative">
+    <img
+      alt=""
+      src={ImageHeroBg.src}
+      class="absolute w-full h-full object-cover rounded-[30px]"
+    />
 
-  <div
-    class="relative rounded-[30px] flex flex-col gap-[6px] p-[20px] lg:gap-[10px] md:px-[50px] md:py-[30px]"
-  >
-    <div>
-      <h1
-        class="text-[22px] font-bold md:text-[30px] leading-tight lg:text-[40px]"
-      >
-        <span
-          class="bg-gradient-to-r from-secondary to-primary inline-block text-transparent bg-clip-text"
-        >
-          {titleHightlight}
-        </span>
-        {titleRest}
-      </h1>
-    </div>
-
-    <p
-      class="text-[12px] w-full md:w-1/2 lg:text-[16px] leading-5 lg:leading-8"
+    <div
+      class="relative rounded-[30px] flex flex-col gap-[6px] p-[20px] lg:gap-[10px] md:px-[50px] md:py-[30px]"
     >
-      {description}
-    </p>
+      <div>
+        <h1
+          class="text-[22px] font-bold md:text-[30px] leading-tight lg:text-[40px]"
+        >
+          <span
+            class="bg-gradient-to-r from-secondary to-primary inline-block text-transparent bg-clip-text"
+          >
+            {titleHightlight}
+          </span>
+          {titleRest}
+        </h1>
+      </div>
+
+      <p
+        class="text-[12px] w-full md:w-1/2 lg:text-[16px] leading-5 lg:leading-8"
+      >
+        {description}
+      </p>
+    </div>
   </div>
 </section>
