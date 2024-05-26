@@ -5,7 +5,7 @@ import BaseButton from '~/modules/base/components/base-button.astro';
 ---
 
 <section class="max-w-[1200px] mx-auto px-[20px]">
-  <div class="flex flex-col-reverse gap-[20px] sm:gap-[30px] sm:flex-row">
+  <div class="flex flex-col-reverse gap-[20px] lg:gap-[30px] sm:flex-row">
     <div class="relative overflow-hidden w-full bg-gray-main rounded-[30px]">
       <img
         alt=""
@@ -93,11 +93,11 @@ import BaseButton from '~/modules/base/components/base-button.astro';
       </div>
     </div>
 
-    <div class="rounded-[30px]">
+    <div class="flex justify-center rounded-[30px] md:block">
       <img
         alt="Cahyadi Photo"
         src={ImageHeroCahyadi.src}
-        class="h-[300px] object-cover rounded-[30px] w-full sm:h-[400px] sm:w-[550px] lg:w-[600px] lg:h-[500px]"
+        class="h-[180px] w-[180px] object-cover rounded-full sm:h-[400px] sm:w-[550px] md:rounded-[30px] lg:w-[600px] lg:h-[500px]"
       />
     </div>
   </div>
